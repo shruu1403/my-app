@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* ── Custom Properties ── */
+:root {
+  --color-bg: #0a0a0a;
+  --color-text: #f5f5f5;
+  --color-accent: #c8a96e;
+  --color-muted: #888888;
+}
+
+/* ── Base Resets ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto; /* let GSAP handle scrolling */
+}
+
+body {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Utility: hide scrollbar but keep scrolling ── */
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ── Pin spacer fix ── */
+.pin-spacer {
+  overflow: visible !important;
+}
